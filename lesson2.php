@@ -50,7 +50,7 @@ class SelfIntroduction
 }
 
 if (! empty($_POST)) {
-    $selfIntroduction = new SelfIntroduction($_POST['last_name'], $_POST['first_name'], $_POST['age'], $_POST['hobby']);
+    $selfIntroduction = new SelfIntroduction($_POST['last_name'], $_POST['first_name'], intval($_POST['age']), $_POST['hobby']);
     echo '私の名前は'.$selfIntroduction->getFullName().'年齢は'.$selfIntroduction->getAge().'です。';
     echo '<br>';
     echo '趣味は'. $selfIntroduction->getHobby().'です。';
